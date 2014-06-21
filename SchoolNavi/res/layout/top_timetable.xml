@@ -1,0 +1,18 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/TopTimeTableLinearH"
+    android:layout_marginTop="1dp">
+    <TextView
+	    style="@style/TopTimeTablePeriod"
+	    android:id="@+id/sjTime" />
+
+    <TextView
+        android:id="@+id/sjName"
+        style="@style/TopTimeTableSubject"
+        android:text="@string/default_lesson" />
+
+    <TextView
+        android:id="@+id/classRoom"
+        style="@style/TopTimeTableRoom" />
+</LinearLayout>

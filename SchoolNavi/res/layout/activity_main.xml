@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allbackground"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <!-- ヘッダー -->
+
+        <LinearLayout style="@style/HeaderLinearH" >
+
+            <ImageView
+                style="@style/HeaderIcn"
+                android:src="@drawable/home" />
+
+            <TextView
+                style="@style/HeaderTxt"
+                android:id="@+id/class_name"
+                android:text="@string/class_name" />
+            <!-- ヘッダー文字とアイコンの間の空白 -->
+
+            <TextView style="@style/HeaderSpc" />
+
+            <ImageView
+                android:id="@+id/menuListBtn"
+                style="@style/HeaderList" />
+        </LinearLayout>
+        <!-- ヘッダーend -->
+
+        <!-- コンテンツ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical" >
+
+<!--            <info.starseeker.customwidget.AutoScrollView
+                android:id="@+id/scrview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginTop="5dp"
+                frameDelta="1"
+                frameInterval="40"
+                isLoop="true"
+                lapelInterval="1000"
+                loopInterval="1000"
+                android:background="@drawable/backwhite_border"
+                android:scrollbars="none" >
+-->
+                <TextView
+                    android:id="@+id/scrollnews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                	android:background="@drawable/backwhite_border" />"
+<!--              </info.starseeker.customwidget.AutoScrollView> -->
+
+            <TextView
+                android:id="@+id/caltxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sidespace"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:gravity="center_vertical"
+                android:text="Calendar" />
+
+            <!-- Calendar予定 -->
+
+            <LinearLayout
+                android:id="@+id/calendar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <!-- 1 -->
+                <include
+                    android:id="@+id/event1"
+                    layout="@layout/cal_title" />
+                <!-- 2 -->
+                <include
+                    android:id="@+id/event2"
+                    layout="@layout/cal_title" />
+                <!-- 3 -->
+                <include
+                    android:id="@+id/event3"
+                    layout="@layout/cal_title" />
+                <!-- 4 -->
+                <include
+                    android:id="@+id/event4"
+                    layout="@layout/cal_title" />
+                <!-- 5 -->
+                <include
+                    android:id="@+id/event5"
+                    layout="@layout/cal_title" />
+                <!-- 6 -->
+                <include
+                    android:id="@+id/event6"
+                    layout="@layout/cal_title" />
+                <!-- 7 -->
+                <include
+                    android:id="@+id/event7"
+                    layout="@layout/cal_title" />
+            </LinearLayout>
+
+            <!-- TimeTableをリスト的配置 -->
+
+            <TextView
+                android:id="@+id/TimeTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/subtitle"
+                android:gravity="center"
+                android:paddingBottom="@dimen/strVertical_padding"
+                android:paddingTop="@dimen/strVertical_padding"
+                android:text="TimeTable"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+            <!-- 1行目 -->
+
+            <include
+                android:id="@+id/tt1st"
+                layout="@layout/top_timetable" />
+
+            <TextView style="@style/TopTimeTableLine" />
+            <!-- 2行目 -->
+
+            <include
+                android:id="@+id/tt2nd"
+                layout="@layout/top_timetable" />
+
+            <TextView style="@style/TopTimeTableLine" />
+
+            <!-- 3行目 -->
+
+            <include
+                android:id="@+id/tt3rd"
+                layout="@layout/top_timetable" />
+
+            <TextView style="@style/TopTimeTableLine" />
+            <!-- 4行目 -->
+
+            <include
+                android:id="@+id/tt4th"
+                layout="@layout/top_timetable" />
+
+            <TextView style="@style/TopTimeTableLine" />
+            <!-- 5行目 -->
+
+            <include
+                android:id="@+id/tt5th"
+                layout="@layout/top_timetable" />
+
+
+        </LinearLayout>
+        <!-- コンテンツend -->
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/allcover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <info.starseeker.customwidget.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/info.starseeker.schoolnavi"
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        my:content="@+id/sidecontent"
+        my:direction="rightToLeft"
+        my:handle="@+id/handle"
+        my:topOffset="@dimen/sidemenu_offset" >
+
+        <include
+            android:id="@id/sidecontent"
+            layout="@layout/sidemenu" />
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+    </info.starseeker.customwidget.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>

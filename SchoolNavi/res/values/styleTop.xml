@@ -1,0 +1,49 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="TopCalendarEventTitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:ellipsize">none</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:scrollHorizontally">false</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="TopTimeTableLinearH">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="TopTimeTablePeriod">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/period</item>
+    </style>
+	<style name="TopTimeTableSubject">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">match_parent</item>
+	    <item name="android:layout_weight">4</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:singleLine">true</item>
+	</style>
+	<style name="TopTimeTableRoom">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">match_parent</item>
+	    <item name="android:layout_weight">1</item>
+	    <item name="android:gravity">center</item>
+	</style>
+	<style name="TopTimeTableLine">
+	    <item name="android:layout_width">match_parent</item>
+	    <item name="android:layout_height">2dp</item>
+	    <item name="android:layout_marginLeft">7dp</item>
+	    <item name="android:layout_marginRight">7dp</item>
+	    <item name="android:background">@drawable/line</item>
+	    <item name="android:gravity">center</item>
+	</style>
+</resources>

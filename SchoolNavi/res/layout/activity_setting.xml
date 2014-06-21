@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allbackground"
+        android:orientation="vertical" >
+
+        <!-- ヘッダー -->
+
+        <LinearLayout style="@style/HeaderLinearH" >
+
+            <ImageView
+                style="@style/HeaderIcn"
+                android:src="@drawable/setting" />
+
+            <TextView
+                style="@style/HeaderTxt"
+                android:text="Setting" />
+
+            <TextView style="@style/HeaderSpc" />
+
+            <ImageView
+                android:id="@+id/menuListBtn"
+                style="@style/HeaderList" />
+        </LinearLayout>
+        <!-- コンテンツ -->
+
+        <ScrollView
+            android:id="@+id/ScrollView01"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:fillViewport="true"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- ClassNumber -->
+                <LinearLayout style="@style/SettingNameLinear" >
+
+                    <ImageView
+                        style="@style/SettingNameImage"
+                        android:src="@drawable/setting_user" />
+
+                    <TextView
+                        style="@style/SettingNameText"
+                        android:text="ClassNumber" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/setting_class_number_layout"
+                    style="@style/SettingContentLinearH"
+                    android:layout_marginLeft="@dimen/marginSide"
+                    android:layout_marginRight="@dimen/marginSide"
+                    android:background="@drawable/backwhite_border" >
+
+                    <TextView
+                        android:id="@+id/setting_class_number"
+                        style="@style/SettingContentText" />
+
+                    <ImageView style="@style/SettingContentEnter" />
+                </LinearLayout>
+
+                <!-- Notifications -->
+                <LinearLayout style="@style/SettingNameLinear" >
+
+                    <ImageView
+                        style="@style/SettingNameImage"
+                        android:src="@drawable/setting_notification" />
+
+                    <TextView
+                        style="@style/SettingNameText"
+                        android:text="Notifications" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/SettingContentLinearV" >
+                    <!-- Notifications -->
+                    <LinearLayout style="@style/SettingContentLinearH" >
+
+                        <TextView
+                            style="@style/SettingContentText"
+                            android:layout_weight="1"
+                            android:text="Notifications" />
+                        <Switch
+                            android:id="@+id/notifies"
+                            style="@style/SettingSwitch"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+<!-- -->
+                    <!-- NewsNotifi 
+                    <LinearLayout style="@style/SettingContentLinearH" >
+
+                        <TextView
+                            style="@style/SettingContentText"
+                            android:layout_weight="1"
+                            android:text="News" />
+                        <Switch
+                            android:id="@+id/newsnotifi"
+                            style="@style/SettingSwitch"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#666666" />
+-->
+                    <!-- CalNotifi
+                    <LinearLayout style="@style/SettingContentLinearH" >
+
+                        <TextView
+                            style="@style/SettingContentText"
+                            android:layout_weight="1"
+                            android:text="Calendar" />
+                        <Switch
+                            android:id="@+id/calnotifi"
+                            style="@style/SettingSwitch"/>
+                    </LinearLayout>
+-->
+                </LinearLayout>
+<!--  -->
+                <!-- Calendar
+
+                <LinearLayout style="@style/SettingNameLinear" >
+
+                    <ImageView
+                        style="@style/SettingNameImage"
+                        android:src="@drawable/setting_calendar" />
+
+                    <TextView
+                        style="@style/SettingNameText"
+                        android:text="Calendar" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/SettingContentLinearV" >
+
+                    <LinearLayout style="@style/SettingContentLinearH" >
+
+                        <TextView style="@style/SettingContentText" />
+
+                        <ImageView style="@style/SettingContentEnter" />
+                    </LinearLayout>
+                </LinearLayout>
+-->
+                <!-- News
+
+                <LinearLayout style="@style/SettingNameLinear" >
+
+                    <ImageView
+                        style="@style/SettingNameImage"
+                        android:src="@drawable/news" />
+
+                    <TextView
+                        style="@style/SettingNameText"
+                        android:text="News" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/SettingContentLinearV" >
+
+                    <LinearLayout style="@style/SettingContentLinearH" >
+
+                        <TextView style="@style/SettingContentText" />
+
+                        <ImageView style="@style/SettingContentEnter" />
+                    </LinearLayout>
+                </LinearLayout>
+-->
+            </LinearLayout>
+        </ScrollView>
+        <!-- コンテンツend -->
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/allcover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <info.starseeker.customwidget.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/info.starseeker.schoolnavi"
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        my:content="@+id/sidecontent"
+        my:direction="rightToLeft"
+        my:handle="@+id/handle"
+        my:topOffset="@dimen/sidemenu_offset" >
+
+        <include
+            android:id="@id/sidecontent"
+            layout="@layout/sidemenu" />
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+    </info.starseeker.customwidget.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>

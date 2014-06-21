@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:background="#444444"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <!-- Home -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideHome" >
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/home" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="Home" />
+
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- News -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideNews" >
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/news" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="News" />
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- Calendar -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideCal" >
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/calendar" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="Calendar" />
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- TimeTable -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideTT" >
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/timetable" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="TimeTable" />
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- SpaceClassRoom -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideSCR">
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/spaceclassroom" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="SCR" />
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- Setting -->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:id="@+id/sideSetting">
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/setting" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="Setting" />
+    </LinearLayout>
+    <TextView
+            style="@style/SideLine"/>
+    <!-- Test TODO あとで消す-->
+
+    <LinearLayout style="@style/SideMenuLinearH"
+        android:visibility="gone"
+        android:id="@+id/sideTest">
+
+        <ImageView
+            style="@style/SideMenuImage"
+            android:src="@drawable/setting_user" />
+
+        <TextView
+            style="@style/SideMenuText"
+            android:text="Test" />
+    </LinearLayout>
+    <TextView
+        	android:visibility="gone"
+            style="@style/SideLine"/>
+
+</LinearLayout>

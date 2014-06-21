@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="strVertical_padding">1.5dp</dimen>
+	<dimen name="newsTopSpace">5dp</dimen>
+	<dimen name="vertical_margin">1dp</dimen>
+	<dimen name="sidespace">5dp</dimen>
+	<dimen name="marginSide">20dp</dimen>
+	<dimen name="setting_paddingvartical">12dp</dimen>
+	<dimen name="sidemenu_offset">150dp</dimen>
+</resources>

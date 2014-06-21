@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">SchoolNavi</string>
+    <string name="action_settings">Settings</string>
+    <string name="class_name">Class:2AKS</string>
+    <string name="default_lesson">授業なし</string>
+    <string name="error">Error</string>
+    <string name="not_event">予定がありません</string>
+    <string name="prev">Prev</string>
+    <string name="next">Next</string>
+    <string name="cal">Calendar</string>
+
+    <string name="weekSpnTitle">Select Week</string>
+    <string-array name="weekSpn">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wedneshday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+    <string name="periodSpnTitle">Select Period</string>
+    <string-array name="periodSpn">
+        <item>1st</item>
+        <item>2nd</item>
+        <item>3rd</item>
+        <item>4th</item>
+        <item>5th</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allbackground"
+        android:orientation="vertical" >
+
+        <!-- ヘッダー -->
+
+        <LinearLayout style="@style/HeaderLinearH" >
+
+            <ImageView
+                style="@style/HeaderIcn"
+                android:src="@drawable/spaceclassroom" />
+
+            <TextView
+                style="@style/HeaderTxt"
+                android:text="SpaceClassRoom" />
+
+            <TextView style="@style/HeaderSpc" />
+
+            <ImageView
+                android:id="@+id/menuListBtn"
+                style="@style/HeaderList" />
+        </LinearLayout>
+        <!-- コンテンツ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="@dimen/marginSide"
+                android:layout_marginRight="@dimen/marginSide"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Space Room Select"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/roomSelectImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/arrow_bottom" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+
+
+                <ScrollView
+                    android:id="@+id/resultScroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="invisible"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp" >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginSide"
+                            android:layout_marginRight="@dimen/marginSide"
+                            android:adjustViewBounds="true"
+                            android:padding="20dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/computerroom_img" />
+
+                        <LinearLayout
+                            android:id="@+id/computerroom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginSide"
+                            android:layout_marginRight="@dimen/marginSide"
+                            android:background="@drawable/backwhite_border"
+                            android:padding="10dp"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginSide"
+                            android:layout_marginRight="@dimen/marginSide"
+                            android:adjustViewBounds="true"
+                            android:padding="20dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/classroom_img" />
+
+                        <LinearLayout
+                            android:id="@+id/classroom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/marginSide"
+                            android:layout_marginRight="@dimen/marginSide"
+                            android:padding="10dp"
+                            android:background="@drawable/backwhite_border"
+                            android:orientation="vertical" >
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+
+                    <LinearLayout
+                        android:id="@+id/serchArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:layout_marginLeft="@dimen/marginSide"
+                        android:layout_marginRight="@dimen/marginSide"
+                        android:orientation="horizontal"
+                        android:background="@color/allbackground"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/backwhite_border"
+                            android:orientation="vertical" >
+
+                            <Spinner
+                                android:id="@+id/weekdayspinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/weekSpn"
+                                android:padding="15dp"
+                                android:prompt="@string/weekSpnTitle" />
+
+                            <Spinner
+                                android:id="@+id/periodspinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:entries="@array/periodSpn"
+                                android:padding="15dp"
+                                android:prompt="@string/periodSpnTitle" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/scrbtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="@dimen/marginSide"
+                            android:gravity="center"
+                            android:text="Search" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:background="#666666"
+                        android:layout_alignBottom="@id/serchArea" />
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- コンテンツend -->
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/allcover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <info.starseeker.customwidget.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/info.starseeker.schoolnavi"
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        my:content="@+id/sidecontent"
+        my:direction="rightToLeft"
+        my:handle="@+id/handle"
+        my:topOffset="@dimen/sidemenu_offset" >
+
+        <include
+            android:id="@id/sidecontent"
+            layout="@layout/sidemenu" />
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+    </info.starseeker.customwidget.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dayLinear"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:padding="4dp"
+    android:background="@drawable/backnone_border"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/caldate"
+        style="@style/CalendarDayNum" />
+
+    <LinearLayout style="@style/CalendarDaySchLinearV" >
+
+        <TextView
+            android:id="@+id/eventTitle1"
+            style="@style/CalendarEventTitle" />
+
+        <TextView
+            android:id="@+id/eventTitle2"
+            style="@style/CalendarEventTitle" />
+
+        <TextView
+            android:id="@+id/eventTitle3"
+            style="@style/CalendarEventTitle" />
+
+        <TextView
+            android:id="@+id/otherEvent"
+            style="@style/CalendarEventTitle" />
+    </LinearLayout>
+
+</LinearLayout>

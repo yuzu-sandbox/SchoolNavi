@@ -1,0 +1,3 @@
+"Preference Name",  MODE_PRIVATE
+"Launched", false
+"Class"

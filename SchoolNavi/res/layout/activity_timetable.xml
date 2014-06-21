@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/allbackground"
+        android:orientation="vertical" >
+
+        <!-- ヘッダー -->
+
+        <LinearLayout style="@style/HeaderLinearH" >
+
+            <ImageView
+                style="@style/HeaderIcn"
+                android:src="@drawable/timetable" />
+
+            <TextView
+                style="@style/HeaderTxt"
+                android:text="TimeTable" />
+
+            <TextView style="@style/HeaderSpc" />
+
+            <ImageView
+                android:id="@+id/menuListBtn"
+                style="@style/HeaderList" />
+        </LinearLayout>
+        <!-- コンテンツ -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="vertical" >
+
+            <!-- 曜日の行 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.7"
+                android:orientation="horizontal" >
+
+                <!-- 左上の塗りつぶし項目 -->
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+					style="@style/TTWeekDay"
+                    android:text="Mon." />
+
+                <TextView
+					style="@style/TTWeekDay"
+                    android:text="Tue." />
+
+                <TextView
+					style="@style/TTWeekDay"
+                    android:text="Wed." />
+
+                <TextView
+					style="@style/TTWeekDay"
+                    android:text="Thu."/>
+
+                <TextView
+                    style="@style/TTWeekDay"
+                    android:text="Fri." />
+            </LinearLayout>
+
+            <!-- TimeTableのセル -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:orientation="horizontal" >
+
+                <!-- 何限目か -->
+            	<LinearLayout
+                    android:id="@+id/periodLL"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                </LinearLayout>
+                <View
+                    android:layout_width="3px"
+                    android:layout_height="match_parent"
+                    android:background="#333333"/>
+                <!-- 1列目end -->
+                <!-- 月曜 ~ 金曜まではプログラムで書く -->
+                <LinearLayout
+                    android:id="@+id/time_week_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="10">
+                </LinearLayout>
+                <!-- 時間割表示end -->
+			</LinearLayout>
+        </LinearLayout>
+        <!-- コンテンツend -->
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/allcover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#8000"
+        android:clickable="true"
+        android:visibility="gone" />
+
+    <info.starseeker.customwidget.MultiDirectionSlidingDrawer
+        xmlns:my="http://schemas.android.com/apk/res/info.starseeker.schoolnavi"
+        android:id="@+id/drawer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        my:content="@+id/sidecontent"
+        my:direction="rightToLeft"
+        my:handle="@+id/handle"
+        my:topOffset="@dimen/sidemenu_offset" >
+
+        <include
+            android:id="@id/sidecontent"
+            layout="@layout/sidemenu" />
+
+        <ImageView
+            android:id="@id/handle"
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+    </info.starseeker.customwidget.MultiDirectionSlidingDrawer>
+
+</RelativeLayout>

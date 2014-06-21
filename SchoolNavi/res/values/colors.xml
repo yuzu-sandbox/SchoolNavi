@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="period">#3333AA</color>
+    <color name="allbackground">#DDDDDD</color>
+	<color name="subtitle">#5389d6</color>
+	<color name="gray">#333333</color>
+	<color name="white">#FFFFFF</color>
+	<color name="red_sunday">#cf737a</color>
+	<color name="brue_saturday">#5d87b7</color>
+	<color name="gray_normalday">#898989</color>
+</resources>
